@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">urist1</string>
+    <string name="title_home">Главная</string>
+    <string name="title_dashboard">Цены</string>
+    <string name="abaut_me">О компании</string>
+    <string name="title_notifications">Онлайн заявка</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
