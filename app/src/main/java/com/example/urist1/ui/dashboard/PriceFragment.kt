@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.example.urist1.R
 import com.example.urist1.databinding.FragmentPriceBinding
 
 class PriceFragment : Fragment() {
@@ -25,6 +27,9 @@ class PriceFragment : Fragment() {
             ViewModelProvider(this).get(DashboardViewModel::class.java)
 
         _binding = FragmentPriceBinding.inflate(inflater, container, false)
+        binding.root.setOnClickListener {
+            findNavController().navigate(R.id.navigation_notifications)
+        }
         val root: View = binding.root
 
         return root
