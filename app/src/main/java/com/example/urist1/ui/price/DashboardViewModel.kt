@@ -1,4 +1,4 @@
-package com.example.urist1.ui.dashboard
+package com.example.urist1.ui.price
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

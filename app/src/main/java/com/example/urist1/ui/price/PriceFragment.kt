@@ -1,13 +1,13 @@
-package com.example.urist1.ui.dashboard
+package com.example.urist1.ui.price
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.OnClickListener
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
-import com.example.urist1.R
+import com.example.urist1.MainActivity
 import com.example.urist1.databinding.FragmentPriceBinding
 
 class PriceFragment : Fragment() {
@@ -27,12 +27,24 @@ class PriceFragment : Fragment() {
             ViewModelProvider(this).get(DashboardViewModel::class.java)
 
         _binding = FragmentPriceBinding.inflate(inflater, container, false)
-        binding.root.setOnClickListener {
-            findNavController().navigate(R.id.navigation_notifications)
-        }
+        binding.card1.setOnClickListener(listener)
+        binding.card2.setOnClickListener(listener)
+        binding.card3.setOnClickListener(listener)
+        binding.card4.setOnClickListener(listener)
+        binding.card5.setOnClickListener(listener)
+        binding.card6.setOnClickListener(listener)
+        binding.card7.setOnClickListener(listener)
+        binding.card8.setOnClickListener(listener)
+        binding.card9.setOnClickListener(listener)
+
         val root: View = binding.root
 
         return root
+    }
+
+    private val listener = OnClickListener {
+
+        (requireActivity() as MainActivity).moveToRequestForm()
     }
 
     override fun onDestroyView() {
