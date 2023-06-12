@@ -31,6 +31,7 @@
     </com.google.android.material.appbar.MaterialToolbar>
 
     <LinearLayout
+        android:id="@+id/linear_docks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="8dp"
@@ -72,6 +73,7 @@
             android:background="#d9d9d9" />
 
         <LinearLayout
+            android:id="@+id/linear_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -106,6 +108,7 @@
             android:background="#d9d9d9" />
 
         <LinearLayout
+            android:id="@+id/linear_about_me"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
@@ -133,7 +136,5 @@
                 android:textColor="#5d5d5d"
                 android:textSize="16dp" />
         </LinearLayout>
-
     </LinearLayout>
-
 </LinearLayout>

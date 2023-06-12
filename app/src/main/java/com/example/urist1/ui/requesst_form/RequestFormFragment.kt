@@ -20,7 +20,9 @@ class RequestFormFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-
+    var name = false
+    var phone = false
+    var text = false
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -30,7 +32,18 @@ class RequestFormFragment : Fragment() {
         val root: View = binding.root
 
         binding.editText.addTextChangedListener {
-            binding.button.isEnabled = it?.length != null && it.isNotEmpty()
+            text = it?.length != null && it.isNotEmpty()
+            changeButton()
+        }
+
+        binding.editTextPhone.addTextChangedListener {
+            phone = it?.length != null && it.isNotEmpty()
+            changeButton()
+        }
+
+        binding.editTextName.addTextChangedListener {
+            name = it?.length != null && it.isNotEmpty()
+            changeButton()
         }
 
         binding.button.setOnClickListener {
@@ -40,6 +53,10 @@ class RequestFormFragment : Fragment() {
             binding.editText.setText("")
         }
         return root
+    }
+
+    fun changeButton() {
+        binding.button.isEnabled = text && phone && name
     }
 
     override fun onDestroyView() {
