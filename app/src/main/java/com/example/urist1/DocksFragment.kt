@@ -3,11 +3,11 @@ package com.example.urist1
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.urist1.databinding.FragmentAboutMeBinding
+import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.urist1.databinding.FragmentDocksBinding
 
 class DocksFragment : Fragment() {
@@ -42,6 +42,9 @@ class DocksFragment : Fragment() {
                     Uri.parse("http://ocenkagarant.ru/images/3/4.BMP")
                 )
             )
+        }
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().popBackStack()
         }
         return binding.root
     }

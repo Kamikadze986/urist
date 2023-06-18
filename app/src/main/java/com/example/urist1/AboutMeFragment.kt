@@ -40,7 +40,7 @@ class AboutMeFragment : Fragment() {
         }
 
         binding.linearDocks.setOnClickListener {
-            findNavController().navigate(R.id.docksFragment)
+            findNavController().navigate(R.id.docksFragment2)
         }
         return binding.root
     }

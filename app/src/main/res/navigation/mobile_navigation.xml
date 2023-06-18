@@ -24,16 +24,7 @@
         tools:layout="@layout/fragment_request_form" />
     <fragment
         android:id="@+id/navigation_about_me"
-        android:name="com.example.urist1.AboutMeFragment"
-        android:label="fragment_about_me"
-        tools:layout="@layout/fragment_about_me" >
-        <action
-            android:id="@+id/action_navigation_about_me_to_docksFragment"
-            app:destination="@id/docksFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/docksFragment"
-        android:name="com.example.urist1.DocksFragment"
-        android:label="fragment_docks"
-        tools:layout="@layout/fragment_docks" />
+        android:name="com.example.urist1.ui.AboutMeContainerFragment"
+        android:label="fragment_about_me_container"
+        tools:layout="@layout/fragment_about_me_container" />
 </navigation>
