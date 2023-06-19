@@ -1,4 +1,4 @@
-package com.example.urist1
+package com.example.urist1.ui
 
 import android.content.Intent
 import android.net.Uri

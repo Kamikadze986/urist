@@ -1,13 +1,20 @@
 package com.example.urist1
 
 import android.os.Bundle
+import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.urist1.authManager.AuthorizationManager
 import com.example.urist1.databinding.ActivityMainBinding
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.flow.shareIn
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +29,9 @@ class MainActivity : AppCompatActivity() {
         val navView: BottomNavigationView = binding.navView
 
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        AuthorizationManager(this).isAutorizeFlow().onEach {
+                navView.menu.findItem(R.id.navigation_notifications).isVisible = it
+            }.launchIn(lifecycleScope)
 
         navView.setupWithNavController(navController)
 

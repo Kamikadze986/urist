@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.RegisterFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/baseline_arrow_back_24">
+
+        <TextView
+            android:id="@+id/text_view_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:text="Регистрация аккаунта"
+            android:textColor="#004C45"
+            android:textSize="28dp" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <TextView
+        android:id="@+id/text_view_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Для того чтобы заказать оценку недвижимости"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/edit_text_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background_edit_text"
+        android:hint="Введите ваш email"
+        android:inputType="textEmailAddress"
+        android:minHeight="60dp"
+        android:padding="8dp"
+        android:textColor="#004C45" />
+
+    <EditText
+        android:id="@+id/edit_text_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background_edit_text"
+        android:hint="Введите ваш пароль"
+        android:inputType="textPassword"
+        android:maxLength="12"
+        android:minHeight="60dp"
+        android:padding="8dp"
+        android:textColor="#004C45" />
+    <EditText
+        android:id="@+id/edit_text_two_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background_edit_text"
+        android:hint="Повторите ваш пароль"
+        android:inputType="textPassword"
+        android:maxLength="12"
+        android:minHeight="60dp"
+        android:padding="8dp"
+        android:textColor="#004C45" />
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:enabled="true"
+        android:minHeight="55dp"
+        android:text="Зарегистрироватся"
+        android:textColor="@drawable/selector_button_text" />
+
+</LinearLayout>
